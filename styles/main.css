@@ -11,7 +11,6 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-
 }
 
 html {
@@ -48,7 +47,7 @@ header {
     gap: 0px;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding:10px;
 }
 
 .headerBottom {
@@ -94,14 +93,14 @@ nav ul li {
     border: 1px solid var(--border-bold-color);
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 18px 0;
     background-color: var(--main-background-color);
 }
 nav ul li a {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: var(--header-footer-font-color);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -123,21 +122,16 @@ nav ul li a {
     }
 }
 
-#navIcon ,#navCloseIcon , .languageIcon {
-    width: 60px;
-    height: 60px;
+#navIcon ,#navCloseIcon , #languageIcon {
+    max-width: 40px;
+    max-width: 40px;
+    padding: 2px;
     cursor: pointer;
-}
-.headerMainLogo {
-    width: 100px;
-    height: 100px;
-    vertical-align: middle;
 }
 
 .headerMainText{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 0 20px;
     vertical-align: middle;
     text-align: center;
     width: 100%;    
@@ -167,54 +161,51 @@ footer {
     flex-direction: row;
     justify-content:center;
     align-items: center;
-    padding: 20px;
     gap: 10px;
 
 }
 
-#footerMiddle {
+.footerMiddle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 20px;
 }
-#footerBottom{
+.footerBottom{
     background-color: var(--footer-bottom-color);
     text-align: center;
     padding: 20px;
     border-top: 5px solid var(--border-bold-color);
 
 }
-#footerLeft {
-    width: 50%;
+.footerLeft {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-#footerRight {
-    width: 50%;
+.footerRight {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#footerInfo {
+.footerInfo {
     display: flex;
     flex-direction: column
 }
 
-#footerContactDetails {
+.footerContactDetails {
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
 }
 
-#footerSocialMedias {
-    margin-top: 10px;
+.footerSocialMedias {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
+    margin-bottom: 10px;
 }
 
 .footerIcon {
@@ -223,28 +214,26 @@ footer {
     vertical-align: middle;
 }
 
-#footerGoogleMaps {
-    margin-left: 25px;
-    width: 95%;
+.footerGoogleMaps {
+    width: 100%;
     height: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     overflow: hidden; /* مهم: محتوا داخل گوشه‌ها رو می‌پوشونه */
 }
 
-#footerGoogleMaps iframe {
+.footerGoogleMaps iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
-.footerMainLogo {
-    width: 80px;
-    height: 80px;
-
+.footerMainLogo , .headerMainLogo {
+    width: 50px;
+    height: 50px;
 }
 
-#footerContactDetails div{
+.footerContactDetails div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -253,7 +242,7 @@ footer {
 }
 
 .footerMainText {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin: 0;
     vertical-align: middle;
@@ -274,44 +263,13 @@ footer {
 }
 
 
-#languageSettings {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-}   
 .languageIcon {
-    width: 50px;
-    height: 50px;
+    height: auto;
+    width: auto;
+    max-width: 35px;
+    max-width: 35px;
     margin: auto;
 
-}
-#languageOptions {
-    margin: auto;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-
-}
-
-#languageOptions div {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    padding: 2px 7px;
-    border-radius: 50px;
-}
-
-.selectedLanguage {
-    font-weight: 700;
-    border-radius: 100px;
-    background-color: var(--border-bold-color);
-    padding: 5px;
 }
 
 

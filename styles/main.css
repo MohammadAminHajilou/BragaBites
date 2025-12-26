@@ -1,0 +1,330 @@
+:root{
+    --main-background-color: #FFB347;
+    --header-footer-color: #FFA500;
+    --footer-bottom-color: #FF8C00;
+    --border-bold-color: #ff6600;
+    --header-footer-font-color: #1F2A37;
+    --main-font-color: #161615;
+}
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+}
+
+body{
+    background-color: var(--main-background-color);
+    padding: 0;
+    margin: 0;    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-footer-color);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.headerBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#navbar {
+    display: none; /* ابتدا مخفی */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* طول کل صفحه */
+    height: 100%; /* اگر میخوای کل ارتفاع صفحه رو بگیره */
+    background-color: rgba(255, 218, 184, 0.623); /* پس‌زمینه */
+    transform: translateX(-100%); /* خارج از صفحه سمت چپ */
+    animation: slideInNav 0.3s ease-in-out forwards; /* انیمیشن */
+    z-index: 1000; /* همیشه روی بقیه باشه */
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0;
+    border: 1px solid var(--border-bold-color);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--main-background-color);
+}
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: var(--header-footer-font-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Keyframes برای slide in */
+@keyframes slideInNav {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOutNav {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#navIcon ,#navCloseIcon , .languageIcon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.headerMainLogo {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.headerMainText{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;    
+}
+
+.headerTop a , .footerTop a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+main {
+    padding: 7.5px 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-footer-color);
+    width: 100%;
+    
+}
+
+
+.footerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
+}
+
+#footerMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+#footerBottom{
+    background-color: var(--footer-bottom-color);
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid var(--border-bold-color);
+
+}
+#footerLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#footerRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#footerInfo {
+    display: flex;
+    flex-direction: column
+}
+
+#footerContactDetails {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+#footerSocialMedias {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.footerIcon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#footerGoogleMaps {
+    margin-left: 25px;
+    width: 95%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden; /* مهم: محتوا داخل گوشه‌ها رو می‌پوشونه */
+}
+
+#footerGoogleMaps iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.footerMainLogo {
+    width: 80px;
+    height: 80px;
+
+}
+
+#footerContactDetails div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.footerMainText {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.footerGradient {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to top, var(--header-footer-color), var(--main-background-color));
+    pointer-events: none;
+}
+
+.headerGradient {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, var(--header-footer-color), var(--main-background-color));
+    pointer-events: none;
+}
+
+
+#languageSettings {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}   
+.languageIcon {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+
+}
+#languageOptions {
+    margin: auto;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+
+}
+
+#languageOptions div {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    padding: 2px 7px;
+    border-radius: 50px;
+}
+
+.selectedLanguage {
+    font-weight: 700;
+    border-radius: 100px;
+    background-color: var(--border-bold-color);
+    padding: 5px;
+}
+
+
+.braga {
+    font-weight: 600;
+    color: #1F2A37;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@700&display=swap');
+.bites {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2F8F8B;
+    text-decoration: none;
+}

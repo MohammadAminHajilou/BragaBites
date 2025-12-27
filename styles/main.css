@@ -7,12 +7,15 @@
     --footer-bottom-color: #FF8C00;
     --border-bold-color: #ff6600;
     --hover-color-bold: #582502;
+    --hover-color-bolder: #361803;
     --header-footer-font-color: #1F2A37;
     --main-font-color: #161615;
     --braga: #1F2A37 ;
     --bites: #2F8F8B ;
+    --card-background: #f7f6f3;
     --sticker-main-color: red ;
     --sticker-sub-color: yellow ;
+    
 }
 
 
@@ -96,7 +99,7 @@ header {
     margin:10px;
 }
 
-#navbar ul li {
+#navbar ul a li {
     margin: 0;
     width: 100%;
     text-align: center;
@@ -107,12 +110,14 @@ header {
     box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.1);
     background-color: var(--body-background-color-light);
 }
-#navbar ul li a {
+#navbar ul a {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: var(--braga);
     font-size: 1.4rem;
     font-weight: bold;
+    width: 80%;
+    margin: 3px 5px;
 }
 
 
@@ -121,6 +126,19 @@ header {
     border: 1px solid var(--border-bold-color);
     margin: 5px 0;
 }
+
+
+#navbar ul a li:hover {
+    transform: translateY(-2px);
+    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.2);
+}
+
+#navbar ul a li:hover {
+    color: var(--hover-color-bold);
+}
+
+
+
 @keyframes slideInNav {
     0% {
         transform: translateX(-100%);
@@ -324,8 +342,8 @@ footer {
 }
 
 .currentPage {
-    font-weight: bold;
-    color: var(--hover-color-bold);
+    font-weight: 800;
+    color: var(--hover-color-bolder);
 }
 
 
@@ -422,9 +440,7 @@ main {
 
 }
 
-a:hover {
-    color: var(--hover-color-bold);
-}
+
 
 
 
@@ -439,7 +455,7 @@ a:hover {
 .orderCard {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: var(--card-background);
     box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
     border-radius: 25px;
     height: 175px;
@@ -460,7 +476,7 @@ a:hover {
 
 
 .orderCardSection a:hover{
-    color: var(--hover-color-bold);
+    color: var(--hover-color-bolder);
 
 }
 .orderCard:hover {

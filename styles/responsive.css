@@ -33,7 +33,7 @@
     margin: auto;
 }
 
-#navbar ul li {
+#navbar ul a li {
     padding: 12px 3px;
     margin: 3px;
     border-radius: 10px;
@@ -42,14 +42,6 @@
     background-color: var(--body-background-color-light);
 }
 
-#navbar ul li:hover {
-    transform: translateY(-2px);
-    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.2);
-}
-
-#navbar ul li a:hover {
-    color: var(--hover-color-bold);
-}
 
 
 .mainText{

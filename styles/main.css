@@ -117,7 +117,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--border-bold-color);
+    color: var(--border-bolder-color);
 }
 
 nav ul hr {

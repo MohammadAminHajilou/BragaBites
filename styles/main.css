@@ -1,10 +1,16 @@
 :root{
-    --main-background-color: #FFB347;
+    --body-background-color: #FFB347;
+    --body-background-color-light: #ffbe62;
+    --body-background-color-bold:#fda933;
+    --main-background-color: #ffdb92;
     --header-footer-color: #FFA500;
     --footer-bottom-color: #FF8C00;
     --border-bold-color: #ff6600;
+    --border-bolder-color: #582502;
     --header-footer-font-color: #1F2A37;
     --main-font-color: #161615;
+    --braga: #1F2A37 ;
+    --bites: #2F8F8B ;
 }
 
 
@@ -22,7 +28,7 @@ html {
 }
 
 body{
-    background-color: var(--main-background-color);
+    background-color: var(--body-background-color);
     padding: 0;
     margin: 0;    
     width: 100%;
@@ -64,10 +70,12 @@ header {
     left: 0;
     width: 75%; 
     height: 100%;
-    background-color: var(--header-footer-color); 
+    background-color: var(--body-background-color-bold); 
     transform: translateX(-100%); 
     animation: slideInNav 0.3s ease-in-out forwards; 
     z-index: 1000; 
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 nav {
@@ -91,23 +99,32 @@ nav ul {
 
 nav ul li {
     margin: 0;
-    border: 1px solid var(--border-bold-color);
     width: 100%;
     text-align: center;
-    padding: 15px 0;
-    margin: 1px;
+    padding: 12px 0;
+    margin: 3px;
     border-radius: 10px;
-    background-color: var(--main-background-color);
+    cursor: pointer;
+    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.1);
+    background-color: var(--body-background-color-light);
 }
 nav ul li a {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
-    color: var(--header-footer-font-color);
-    font-size: 1.5rem;
+    color: var(--braga);
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
-/* Keyframes برای slide in */
+nav ul li a:hover {
+    color: var(--border-bold-color);
+}
+
+nav ul hr {
+    width: 100%;
+    border: 1px solid var(--border-bold-color);
+    margin: 5px 0;
+}
 @keyframes slideInNav {
     0% {
         transform: translateX(-100%);
@@ -132,25 +149,32 @@ nav ul li a {
     cursor: pointer;
 }
 
-#navCloseIcon {
+#navCloseIcon , #closeLang {
     display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; 
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.329); 
-    transform: translateX(-100%); 
-    animation: slideInNav 0.3s ease-in-out forwards; 
-    z-index: 1000; 
+    opacity: 0;
+    animation: opacity0to1 0.3s ease-in-out forwards; 
 }
 
-.headerMainText{
+#navCloseIcon {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+#closeLang {
+    background-color: rgba(0, 0, 0, 0.15); 
+
+}
+
+.mainText{
     font-size: 1.8rem;
     font-weight: bold;
     vertical-align: middle;
     text-align: center;
-    width: 100%;    
+    width: 100%; 
+    cursor: pointer;   
 }
 
 .headerTop a , .footerTop a {
@@ -244,9 +268,10 @@ footer {
     border: none;
 }
 
-.footerMainLogo , .headerMainLogo {
+.mainLogo {
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
 .footerContactDetails div{
@@ -257,24 +282,18 @@ footer {
 
 }
 
-.footerMainText {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin: 0;
-    vertical-align: middle;
-}
 
 .footerGradient {
     width: 100%;
     height: 25px;
-    background: linear-gradient(to top, var(--header-footer-color), var(--main-background-color));
+    background: linear-gradient(to top, var(--header-footer-color), var(--body-background-color));
     pointer-events: none;
 }
 
 .headerGradient {
     width: 100%;
     height: 25px;
-    background: linear-gradient(to bottom, var(--header-footer-color), var(--main-background-color));
+    background: linear-gradient(to bottom, var(--header-footer-color), var(--body-background-color));
     pointer-events: none;
 }
 
@@ -292,7 +311,7 @@ footer {
 .bites {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #2F8F8B;
+    color: var(--bites);
     text-decoration: none;
 }
 
@@ -303,3 +322,96 @@ footer {
     gap: 3px;
 }
 
+.currentPage {
+    font-weight: bold;
+    color: var(--border-bolder-color);
+}
+
+main {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--main-font-color);
+    background-color: var(--main-background-color);
+    margin: 30px 5px;
+    border-radius: 10px;
+    padding: 15px; 
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+#languageMenu {
+    border-radius: 20px;
+    display: none;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: auto; 
+    height: auto;
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
+    background-color: var(--body-background-color); 
+    transform: translateY(-100%); 
+    animation: slideInLang 0.3s ease-in-out forwards;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.languageSelectOption {
+    list-style-type: none;
+}
+
+@keyframes slideInLang {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLang {
+    from {
+        transform: translateX(0);
+
+    }
+    to {
+        transform: translateX(200%);
+
+    }
+}
+
+@keyframes opacity0to1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacity1to0 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.selectedLanguage {
+    font-weight: bold;
+    color: var(--border-bolder-color);
+}
+
+#languageMenu li{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background-color: var(--body-background-color-light);
+    color: var(--header-footer-font-color);
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

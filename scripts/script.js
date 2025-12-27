@@ -42,10 +42,8 @@ function OpenLang() {
 
     langMenu.style.display = "grid";
     close.style.display = "block";
-
-    // reset animation
     langMenu.style.animation = "none";
-    langMenu.offsetHeight; // force reflow
+    langMenu.offsetHeight;
 
     langMenu.style.animation = "slideInLang 0.3s ease-in-out forwards";
     close.style.animation = "opacity0to1 0.2s ease-in-out forwards";
@@ -56,7 +54,6 @@ function CloseLang() {
     const langMenu = document.getElementById("languageMenu");
     const close = document.getElementById("closeLang");
 
-    // reset animation
     langMenu.style.animation = "none";
     langMenu.offsetHeight; 
 

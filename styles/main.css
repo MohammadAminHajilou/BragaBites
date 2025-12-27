@@ -6,7 +6,7 @@
     --header-footer-color: #FFA500;
     --footer-bottom-color: #FF8C00;
     --border-bold-color: #ff6600;
-    --border-bolder-color: #582502;
+    --hover-color-bold: #582502;
     --header-footer-font-color: #1F2A37;
     --main-font-color: #161615;
     --braga: #1F2A37 ;
@@ -17,6 +17,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 html {
@@ -75,17 +76,13 @@ header {
     animation: slideInNav 0.3s ease-in-out forwards; 
     z-index: 1000; 
     box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
-
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-nav {
     height: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-nav ul {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+#navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -97,7 +94,7 @@ nav ul {
     margin:10px;
 }
 
-nav ul li {
+#navbar ul li {
     margin: 0;
     width: 100%;
     text-align: center;
@@ -108,7 +105,7 @@ nav ul li {
     box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.1);
     background-color: var(--body-background-color-light);
 }
-nav ul li a {
+#navbar ul li a {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: var(--braga);
@@ -116,11 +113,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: var(--border-bolder-color);
-}
 
-nav ul hr {
+#navbar ul hr {
     width: 100%;
     border: 1px solid var(--border-bold-color);
     margin: 5px 0;
@@ -157,6 +151,7 @@ nav ul hr {
     width: 100%; 
     height: 100%;
     opacity: 0;
+    z-index: 100;
     animation: opacity0to1 0.3s ease-in-out forwards; 
 }
 
@@ -328,7 +323,7 @@ footer {
 
 .currentPage {
     font-weight: bold;
-    color: var(--border-bolder-color);
+    color: var(--hover-color-bold);
 }
 
 
@@ -406,7 +401,7 @@ footer {
 }
 .selectedLanguage {
     font-weight: bold;
-    color: var(--border-bolder-color);
+    color: var(--hover-color-bold);
 }
 
 
@@ -425,3 +420,6 @@ main {
 
 }
 
+a:hover {
+    color: var(--hover-color-bold);
+}

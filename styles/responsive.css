@@ -1,0 +1,107 @@
+@media screen and (min-width: 768px) {
+
+
+
+    #navbar {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        animation: none;
+        transform: translateX(0);
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+        z-index: 1;
+
+        
+    }
+
+    #navbar ul .mainLogo , #navbar ul .mainText , hr , #navIcon {
+        display: none;
+    }
+
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--body-background-color-bold);
+    padding: 10px;
+    border-radius: 25px;
+    margin: auto;
+}
+
+#navbar ul li {
+    padding: 12px 3px;
+    margin: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.1);
+    background-color: var(--body-background-color-light);
+}
+
+#navbar ul li:hover {
+    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.25);
+}
+
+#navbar ul li a:hover {
+    color: var(--hover-color-bold);
+}
+
+
+.mainText{
+    font-size: 2.5rem;
+}
+
+.mainLogo {
+    width: 70px;
+    height: 70px;
+}
+
+#languageIcon {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#languageMenu {
+    top: 70px;
+}
+.footerMiddle {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerIcon {
+    width: 40px;
+    height: 40px;
+}
+
+    
+
+.languageSelectOption:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.footerSocialMedias {
+    gap: 35px;
+    justify-content: center;
+}
+
+.footerContactDetails{
+    margin:10px auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+

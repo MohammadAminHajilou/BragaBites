@@ -11,6 +11,8 @@
     --main-font-color: #161615;
     --braga: #1F2A37 ;
     --bites: #2F8F8B ;
+    --sticker-main-color: red ;
+    --sticker-sub-color: yellow ;
 }
 
 
@@ -422,4 +424,110 @@ main {
 
 a:hover {
     color: var(--hover-color-bold);
+}
+
+
+
+.orderCardSection {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.orderCard {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    height: 175px;
+    width: 95%;
+    margin: 20px auto;
+    max-width: 500px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderCardSection a{
+    text-decoration: none;
+    color: var(--main-font-color);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.orderCardSection a:hover{
+    color: var(--hover-color-bold);
+
+}
+.orderCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.35);
+}
+
+.orderCardRight , .orderCardLeft {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+
+.hrHorizontal{
+    border: 1px solid var(--border-bold-color);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hrVertical {
+    height: 100%;
+    border: 1px solid var(--border-bold-color);
+}
+
+.orderCardLeft img{
+    width: 60px;
+    height: 60px;
+}
+
+.orderCardLeft iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.orderCardPhone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.orderCardRight img {
+    width: 30px;
+    height: 30px;
+    margin: 0px auto;
+}
+.ordrerCardCheaper {
+    background-color: var(--sticker-main-color);
+    color: var(--sticker-sub-color);
+    border-radius: 15px;
+    padding: 10px 5px;
+    transform: translateX(15px) translateY(85px);
+    align-self: end;
+    position: absolute;
+}
+
+.orderCardRight {
+    width: 65%;
+}
+.orderCardLeft {
+    height: 100%;
+    width: 35%;
 }

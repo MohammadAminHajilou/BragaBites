@@ -18,7 +18,7 @@
         
     }
 
-    #navbar ul .mainLogo , #navbar ul .mainText , hr , #navIcon {
+    #navbar ul .mainLogo , #navbar ul .mainText , #navbar hr, #navIcon {
         display: none;
     }
 
@@ -43,7 +43,8 @@
 }
 
 #navbar ul li:hover {
-    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 10px 0px 20px rgba(66, 25, 1, 0.2);
 }
 
 #navbar ul li a:hover {

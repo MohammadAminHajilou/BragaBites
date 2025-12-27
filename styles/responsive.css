@@ -88,11 +88,17 @@
 
 
 
+.homeTopSection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
 
+}
 
-
-
-
+.homeTopTextSection {
+    max-width: 50%;
+}
 
 
 

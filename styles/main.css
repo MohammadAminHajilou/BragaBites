@@ -315,6 +315,10 @@ footer {
     text-decoration: none;
 }
 
+
+
+
+
 .headerLeft , .headerRight {
     display: flex;
     flex-direction: row;
@@ -325,18 +329,6 @@ footer {
 .currentPage {
     font-weight: bold;
     color: var(--border-bolder-color);
-}
-
-main {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: var(--main-font-color);
-    background-color: var(--main-background-color);
-    margin: 30px 5px;
-    border-radius: 10px;
-    padding: 15px; 
-    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
-
 }
 
 
@@ -357,10 +349,6 @@ main {
     animation: slideInLang 0.3s ease-in-out forwards;
     z-index: 1000;
     padding: 20px;
-}
-
-.languageSelectOption {
-    list-style-type: none;
 }
 
 @keyframes slideInLang {
@@ -400,18 +388,40 @@ main {
     }
 }
 
+
+
+.languageSelectOption{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background-color: var(--body-background-color-light);
+    color: var(--header-footer-font-color);
+    padding: 12px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 .selectedLanguage {
     font-weight: bold;
     color: var(--border-bolder-color);
 }
 
-#languageMenu li{
+
+
+
+
+main {
     font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    background-color: var(--body-background-color-light);
-    color: var(--header-footer-font-color);
-    padding: 5px;
+    font-size: 1rem;
+    color: var(--main-font-color);
+    background-color: var(--main-background-color);
+    margin: 30px 5px;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px; 
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.2);
+
 }
+

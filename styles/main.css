@@ -667,3 +667,158 @@ main {
     display: flex;
     flex-direction: column;    
 }
+
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0px 0px 50px 0px;
+}
+
+.contactSection h1 {
+    color: var(--hover-color-bolder);
+    cursor:default;
+}
+
+.contactFormTop{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.contactFormBottom{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+}
+
+.fileUpload input[type="file"] {
+  display: none;
+}
+
+.contactForm input , .contactForm textarea{
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--main-background-color-bold);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: var(--main-font-color);
+  border: none;
+  height: 50px;
+  width: 100%;
+}
+
+.contactForm textarea {
+    height: 125px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.fileButton {
+    width: 100px;
+}
+
+.fileButton, .contactFormSendButton, .captchaBox {
+  border: none;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: var(--main-background-color-bold);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: var(--main-font-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.contactFormSendButton {
+font-family: 'Poppins', sans-serif;
+font-size:1.1rem;
+font-weight: bold;
+background: var(--body-background-color-light);
+}
+
+.fileButton:hover , .contactFormSendButton:hover , .contactForm input:hover , .contactForm textarea:hover , .captchaBox:hover ,.contactCardInstagram:hover , .contactCardWhatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.contactSectionBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0px 0px 30px 0px;
+    gap: 10px;
+}
+.contactSectionBottom a {
+    width: 100%;
+}
+
+.contactCardInstagram , .contactCardWhatsapp {
+    border-radius: 15px;
+    display: flex;
+    margin: 0px auto;
+    height: 160px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.contactCardInstagramBackground , .contactCardWhatsappBackground {
+width: 100%;
+height: 100%;
+opacity: 0.9;
+}
+
+
+.contactCardInstagramBackground {
+background: linear-gradient(
+  135deg,
+  #515BD4,
+  #8134AF,
+  #DD2A7B
+);
+}
+.contactCardWhatsappBackground {
+background: linear-gradient(
+  135deg,
+  #25D366,
+  #128C7E
+);
+}
+
+.contactSectionBottom a div img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+    border-radius: 15px;
+}
+.contactSectionBottom a:nth-child(2) div img {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.contactSectionBottom a div {
+    align-items: center;
+    justify-content: center;
+}

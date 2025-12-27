@@ -73,9 +73,6 @@ function CloseLang() {
 
 
 
-
-
-
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slideShowImage');
 const dots = document.querySelectorAll('.homeTopSlideshowDot');
@@ -99,10 +96,21 @@ function SlideShowPrevious() {
 }
 
 function SlideShow(index) {
-    showSlide(index - 1); // index از 1 شروع شده تو HTML
+    showSlide(index - 1); 
 }
 
-// نمایش اولیه
+
 showSlide(currentSlide);
 
-// تغییر خودکار هر ۵ ثانیه
+
+
+const fileInput = document.getElementById("imageUpload");
+const fileName = document.getElementById("fileName");
+
+fileInput.addEventListener("change", () => {
+if (fileInput.files.length > 0) {
+    fileName.textContent = fileInput.files[0].name;
+} else {
+    fileName.textContent = "+ image (optional)";
+}
+});

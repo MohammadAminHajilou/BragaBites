@@ -99,12 +99,34 @@
     </header>
 
     <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iusto harum! Beatae totam minus quas consequatur possimus suscipit repudiandae reiciendis provident sequi ab incidunt vero omnis, quidem eos, corrupti optio.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit iusto itaque officia dolorem, voluptatem praesentium ipsam? Autem molestias mollitia fuga, dicta dignissimos est recusandae rerum! Sed quae odio atque tempore!         
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, molestias! Nostrum, consectetur voluptas! Beatae consequuntur, sequi non voluptas repellendus odio, aliquam placeat praesentium sit ipsum, distinctio vel dolorem consectetur itaque?
+        <section class="contactSection">
+            <h1>Message Us</h1>
+            <form class="contactForm">
+                <div class="contactFormTop">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                </div>
+                <div class="contactFormBottom">
+                    <div class="captchaBox">CAPTCHA</div>
+                    <div class="fileUpload">
+                        <input type="file" id="imageUpload" name="image" accept="image/*">
+                        <label for="imageUpload" class="fileButton" id="fileName">+ Image (Optional)</label>
+                    </div>
+                    <button type="submit" class="contactFormSendButton">Send</button>
+                </div>
+            </form>
+            <h1>Contact Us</h1>
+            <div class="contactSectionBottom">
+                <a href="#"><div class="contactCardWhatsapp"> <img src="images/logos/whatsapp.svg" alt="WhatsApp">
+                    <div class="contactCardWhatsappBackground"></div>
+                    </div></a>
+                <a href="#"><div class="contactCardInstagram"> <img src="images/logos/instagram.svg" alt="Instagram">
+                    <div class="contactCardInstagramBackground"></div>
+                    </div></a>
+            </div>
+        </section>
     </main>
-
-
     <footer>
         <div class="footerGradient"></div>
         <div class="footerTop">

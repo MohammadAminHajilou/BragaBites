@@ -818,6 +818,11 @@ background: linear-gradient(
 .contactSectionBottom a:nth-child(2) div img {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+.contactSectionBottom a:nth-child(1) div img {
+    filter: contrast(1.8) saturate(1.4);
+}
+  
+
 .contactSectionBottom a div {
     align-items: center;
     justify-content: center;

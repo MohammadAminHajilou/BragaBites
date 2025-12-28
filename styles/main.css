@@ -590,7 +590,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--card-background);
+    background-color: var(--main-background-color-bolder);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.33);
     color: var(--main-font-color);
     border: none;
@@ -726,7 +726,7 @@ main {
 }
 
 .fileButton {
-    width: 100px;
+    width: 90px;
 }
 
 .fileButton, .contactFormSendButton, .captchaBox {

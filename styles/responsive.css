@@ -104,14 +104,41 @@ opacity: 0.75;
 }
 
 .contactSectionBottom a:hover {
-opacity: 0.9;
-}
-}
-.contactSectionBottom a:active{
 opacity: 1;
-
 }
+
 
 .fileButton {
     width: 165px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

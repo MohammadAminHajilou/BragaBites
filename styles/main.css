@@ -684,7 +684,7 @@ main {
     justify-content: center;
     gap: 10px;
     margin: 0px 0px 50px 0px;
-    padding: 0px 5px;
+    padding: 0px 3px;
 }
 
 .contactSection h1 {
@@ -722,13 +722,14 @@ main {
 }
 
 .contactForm textarea {
-    height: 125px;
+    height: auto;
+    min-height: 175px;
     font-family: 'Poppins', sans-serif;
 
 }
 
 .fileButton {
-    width: 90px;
+    max-width: 165px;
 }
 
 .fileButton, .contactFormSendButton, .captchaBox {
@@ -790,7 +791,7 @@ background: var(--body-background-color-light);
 .contactCardInstagramBackground , .contactCardWhatsappBackground {
 width: 100%;
 height: 100%;
-opacity: 0.9;
+opacity: 1;
 }
 
 
@@ -812,8 +813,8 @@ background: linear-gradient(
 
 .contactSectionBottom a div img {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     z-index: 1000;
     border-radius: 15px;
 }

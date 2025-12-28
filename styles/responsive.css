@@ -100,7 +100,7 @@
     max-width: 50%;
 }
 .contactSectionBottom a{
-opacity: 0.75;
+opacity: 0.8;
 }
 
 .contactSectionBottom a:hover {
@@ -108,13 +108,12 @@ opacity: 1;
 }
 
 
-.fileButton {
-    width: 165px;
-    
+
+.contactSectionBottom a div img {
+    width: 80px;
+    height: 80px;
+
 }
-
-
-
 
 
 

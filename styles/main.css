@@ -166,7 +166,7 @@ header {
     cursor: pointer;
 }
 
-#navCloseIcon , #closeLang {
+#navCloseIcon , #closeLang , #galleryZoomClose , #galleryFilterClose {
     display: none; 
     position: fixed;
     top: 0;
@@ -176,6 +176,7 @@ header {
     opacity: 0;
     z-index: 100;
     animation: opacity0to1 0.3s ease-in-out forwards; 
+    cursor: pointer;
 }
 
 #navCloseIcon {
@@ -184,6 +185,12 @@ header {
 #closeLang {
     background-color: rgba(0, 0, 0, 0.15); 
 
+}
+#galleryFilterClose {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+#galleryZoomClose {
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .mainText{
@@ -271,13 +278,19 @@ footer {
 
 .footerGoogleMaps {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     overflow: hidden;
+    max-width: 800px;
+    margin: 0px auto;
 }
 
 .footerGoogleMaps iframe {
+    align-self: center;
     width: 100%;
     height: 100%;
     border: none;
@@ -418,6 +431,7 @@ footer {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 .selectedLanguage {
     font-weight: bold;
@@ -707,7 +721,7 @@ main {
 }
 
 .fileUpload input[type="file"] {
-  display: none;
+    display: none;
 }
 
 .contactForm input , .contactForm textarea{
@@ -815,7 +829,6 @@ background: linear-gradient(
     position: absolute;
     width: 70px;
     height: 70px;
-    z-index: 1000;
     border-radius: 15px;
 }
 .contactSectionBottom a:nth-child(2) div img {
@@ -830,3 +843,280 @@ background: linear-gradient(
     align-items: center;
     justify-content: center;
 }
+
+.gallerySection {
+    margin: 10px auto;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.galleryImageContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--main-background-color-bold);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.galleryImageContainer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.galleryImageContainer img {
+    width: 100%;
+    height: 50%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.galleryItemsSecion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.galleryDate , .galleryCategory {
+    background-color: var(--main-background-color-boldest);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--hover-color-bolder);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--main-font-color);
+    text-align: center;
+    position: absolute;
+    bottom: -5px;
+
+}
+
+.galleryDate {left: -10px;}
+.galleryCategory {right: -10px;}
+
+.galleryTitle {
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0 15px 0;
+    
+}
+
+.galleryZoomedImage , #zoomedImageContainer{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 98%;
+    top: 27%;
+    position: fixed;
+    z-index: 1000;
+    animation: opacity0to1 0.3s ease-in-out forwards;
+    
+}
+
+.galleryImageContainerBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.gallerySearch img {
+    max-width: 40px;
+    max-height: 40px;
+    cursor: pointer;
+}
+
+.gallerySearch input {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: var(--main-font-color);
+}
+.gallerySearch input:focus {
+    outline: none;   
+
+}
+.gallerySearch input::placeholder{
+    color: var(--braga);
+}
+.gallerySearch input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+.galleryFilterSection h3 {
+    font-weight: bold;
+    color: var(--hover-color-bolder);
+    font-size: 1.5rem;
+    margin: 10px auto;
+}
+
+
+.gallerySearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: var(--main-background-color-boldest);
+    cursor: text;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.gallerySearch:hover , .galleryFilter:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+}
+.gallerySearchSection  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px
+}
+
+
+.galleryFilter{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 15px;
+    background-color: var(--main-background-color-bolder);
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+.galleryFilterSection {
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--main-background-color-bold);
+    padding: 20px;
+    top: 40%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    display: none;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    color: var(--main-font-color);
+
+}
+
+.galleryFilterSection div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+
+.galleryFilterSection div label {
+    cursor: pointer;
+    background-color: var(--main-background-color-boldest);
+    border-radius: 15px;
+    padding: 5px 10px;
+    box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.galleryFilterSection div label:hover {
+    transform: translateY(-2px);
+    box-shadow:0px 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+
+.galleryFilterSection input[type="checkbox"],
+.galleryFilterSection input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+
+.galleryFilterCheckmark {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+.galleryFilterCategory .galleryFilterCheckmark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--header-footer-color);
+  border-radius: 5px;
+  position: relative;
+  box-shadow:0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galleryFilterCategory input:checked + .galleryFilterCheckmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: 3px solid var(--main-background-color) ;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+.galleryFilterDate .galleryFilterCheckmark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--header-footer-color);
+  border-radius: 50%;
+  position: relative;
+  box-shadow:0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galleryFilterDate input:checked + .galleryFilterCheckmark::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--main-background-color);
+}
+
+.galleryFilterSection label:hover .galleryFilterCheckmark {
+  filter: brightness(0.99);
+  box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+

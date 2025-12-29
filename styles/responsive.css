@@ -14,6 +14,7 @@
         box-shadow: none;
         width: 100%;
         z-index: 1;
+        max-width: 1200px;
 
         
     }
@@ -116,28 +117,33 @@ opacity: 1;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.galleryTitle {
+    font-size: 1.4rem;
 
 }
+
+
+.gallerySearch input{
+    font-size: 1.35rem;
+}
+
+
+.galleryFilterSection {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+
+
+.galleryZoomedImage , #zoomedImageContainer{
+
+    top: 11%;
+
+}
+
+}
+
+
+
+
+

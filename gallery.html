@@ -99,10 +99,40 @@
     </header>
 
     <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iusto harum! Beatae totam minus quas consequatur possimus suscipit repudiandae reiciendis provident sequi ab incidunt vero omnis, quidem eos, corrupti optio.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit iusto itaque officia dolorem, voluptatem praesentium ipsam? Autem molestias mollitia fuga, dicta dignissimos est recusandae rerum! Sed quae odio atque tempore!         
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, molestias! Nostrum, consectetur voluptas! Beatae consequuntur, sequi non voluptas repellendus odio, aliquam placeat praesentium sit ipsum, distinctio vel dolorem consectetur itaque?
+        
+        <section class="gallerySection">
+            <div id="zoomedImageContainer">
+            </div>
+            <section class="gallerySearchSection">
+                <label class="gallerySearch">
+                    <input type="search" id="gallerySearchInput" placeholder="Search...">
+                    <img src="images/logos/search.svg" alt="SEARCH">
+                </label>
+                <img src="images/logos/filter.svg" alt="Filter" class="galleryFilter" onclick="GalleryFilterOpen();">
+                <div id="galleryFilterClose" onclick="GalleryFilterClose();"></div>
+                <div class="galleryFilterSection" id="galleryFilterSection">
+                    <h3>Date</h3>
+                    <div class="galleryFilterDate">
+
+                        <label><input type="radio" name="sortOrder" checked> <span class="galleryFilterCheckmark"></span> Latest</label>
+                        <label><input type="radio" name="sortOrder"><span class="galleryFilterCheckmark"></span> Oldest</label>
+                    </div>
+                    <h3>Category</h3>
+                    <div class="galleryFilterCategory">
+                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Food</label>
+                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Event</label>
+                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Restaurant</label>
+                    </div>
+                </div>
+            </section>
+            <section class="galleryItemsSecion" id="galleryContainer">
+                <div id="galleryZoomClose" onclick="GalleryZoomClose();"></div>
+            </section>
+        </section>
+
+        
     </main>
+
 
 
     <footer>
@@ -138,6 +168,7 @@
             <div class="footerBottomText">© Since 2025 Braga Bites. All rights reserved.</div>
         </div>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/gallery.js"></script>
 </body>
 </html>

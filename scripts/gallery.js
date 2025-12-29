@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    fetch("./gallery.json")
+    fetch("../json/gallery.json")
         .then(response => response.json())
         .then(data => {
             data.forEach(({ id, title, date, category }) => {
                 galleryContainer.insertAdjacentHTML("beforeend", `
                     <div class="galleryImageContainer" onclick="GalleryZoom(${id});">
-                        <img src="images/gallery/galleryImage${id}.webp" alt="${title}" class="galleryImage loading="lazy"">
+                        <img src="../../images/gallery/galleryImage${id}.webp" alt="${title}" class="galleryImage loading="lazy"">
                         <div class="galleryImageContainerBottom">
                             <div class="galleryDate">${date}</div>
                             <div class="galleryTitle">${title}</div>
@@ -49,7 +49,7 @@ function GalleryZoom(num) {
     close.style.display = "block";
     close.style.animation = "opacity0to1 0.3s ease-in-out forwards";
     if(zoomedImageContainer.innerHTML = " "){
-        zoomedImageContainer.innerHTML= `<img src="images/gallery/galleryImage${num}.webp" class="galleryZoomedImage">`
+        zoomedImageContainer.innerHTML= `<img src="../../images/gallery/galleryImage${num}.webp" class="galleryZoomedImage">`
     }
 }
 

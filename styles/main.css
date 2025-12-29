@@ -21,6 +21,12 @@
     
 }
 
+:root{
+    /* Base background */
+
+}
+
+
 
 
 *, *::before, *::after {
@@ -191,6 +197,7 @@ header {
     background-color: rgba(0, 0, 0, 0.2); 
 }
 #galleryZoomClose {
+    z-index: 300;
     background-color: rgba(0, 0, 0, 0.8); 
 }
 
@@ -510,18 +517,16 @@ main {
 }
 
 
-
-
-.hrHorizontal{
-    border: 1px solid var(--border-bold-color);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .hrVertical {
     height: 100%;
+    width: 0%;;
     border: 1px solid var(--border-bold-color);
+
+}
+.hrHorizontal {
+    height: 0%;
+    border: 1px solid var(--border-bold-color);
+    width: 100%;
 }
 
 .orderCardLeft img{
@@ -571,10 +576,7 @@ main {
     max-width: 600px;
     width: 100%;
     margin: auto;
-    padding: 5px;
-    border-radius: 15px;
-    background-color: var(--main-background-color-bold);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: transparent;
 
 }
 
@@ -592,7 +594,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
     opacity: 0;
     transition: all 0.6s ease-in-out;
@@ -607,7 +609,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--main-background-color-boldest);
+    background-color: var(--main-background-color-bolder);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     color: var(--hover-color-bolder);
     border: none;
@@ -616,7 +618,7 @@ main {
     z-index: 10;
     transition: all 0.3s;
     border-radius: 10px;
-    font-weight: 1000;
+    font-weight: 900;
     font-size: 1.5rem;
     color: var(--main-font-color);
 
@@ -624,14 +626,14 @@ main {
 
 .slideShowPrevious:hover,
 .slideShowNext:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .slideShowPrevious { left: -10px; }
 .slideShowNext { right: -10px; }
 
 .homeTopDotSection {
-    background-color: var(--main-background-color-bolder);
+    background-color: var(--main-background-color-bold);
     max-width: 150px;
     margin: 10px auto 0px auto;
     padding: 10px;
@@ -663,7 +665,7 @@ main {
 }
 
 .homeTopTextSection {
-    padding: 10px 5px;
+    padding: 15px;
     
 }
 
@@ -671,7 +673,7 @@ main {
     text-align: justify;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 10px auto;
 
 }
@@ -736,6 +738,7 @@ main {
   border: none;
   height: 50px;
   width: 100%;
+  resize: none;
 }
 
 .contactForm textarea {
@@ -849,8 +852,8 @@ background: linear-gradient(
 
 .gallerySection {
     padding: 5px;
-    margin: 10px auto;
-    gap: 25px;
+    margin: 5px auto 10px auto;
+    gap: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -944,27 +947,27 @@ background: linear-gradient(
 
 
 
-.gallerySearch img {
+.gallerySearch img , .menuSearch img {
     max-width: 40px;
     max-height: 40px;
     cursor: pointer;
 }
 
-.gallerySearch input {
+.gallerySearch input  , .menuSearch input {
     background-color: transparent;
     border: none;
     height: 100%;
     width: 100%;
     color: var(--main-font-color);
 }
-.gallerySearch input:focus {
+.gallerySearch input:focus , .menuSearch input:focus {
     outline: none;   
 
 }
-.gallerySearch input::placeholder{
+.gallerySearch input::placeholder , .menuSearch input::placeholder{
     color: var(--braga);
 }
-.gallerySearch input::-webkit-search-cancel-button {
+.gallerySearch input::-webkit-search-cancel-button , .menuSearch input::-webkit-search-cancel-button{
   -webkit-appearance: none;
   appearance: none;
 }
@@ -978,7 +981,7 @@ background: linear-gradient(
 }
 
 
-.gallerySearch{
+.gallerySearch , .menuSearch{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -991,22 +994,27 @@ background: linear-gradient(
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.gallerySearch:hover , .galleryFilter:hover {
+.gallerySearch:hover , .galleryFilter:hover , .menuSearch:hover , .menuFilter:hover{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
     transform: translateY(-2px);
 }
-.gallerySearchSection  {
+.gallerySearchSection , .menuSearchSection  {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
-    max-width: 800px
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.gallerySection hr {
+    display: none;
 }
 
 
-.galleryFilter{
+.galleryFilter , .menuFilter{
     max-width: 50px;
     max-height: 50px;
     border-radius: 15px;
@@ -1019,10 +1027,11 @@ background: linear-gradient(
 
 .galleryFilterSection {
     position: fixed;
-    z-index: 1000;
+    z-index: 200;
     background-color: var(--main-background-color-bold);
-    padding: 20px;
-    top: 40%;
+    padding: 5px 20px 20px 20px;
+    top: 25%;
+    width: 95%;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
     display: none;
@@ -1030,7 +1039,7 @@ background: linear-gradient(
     justify-self: center;
     align-items: center;
     color: var(--main-font-color);
-    overflow: hidden;
+    gap: 25px;
 }
 
 
@@ -1100,19 +1109,38 @@ background: linear-gradient(
 
 .galleryFilterSection div {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.galleryFilterSection div div {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    display: flex;
 
 }
+
+.galleryFilterSection div:last-of-type div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 
 
 .galleryFilterSection div label {
     cursor: pointer;
     background-color: var(--main-background-color-boldest);
     border-radius: 15px;
-    padding: 5px 10px;
+    padding: 5px 8px;
     box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1188,6 +1216,7 @@ background: linear-gradient(
   filter: brightness(0.99);
   box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 
 .aboutSection {

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braga Bites</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
+    <link rel="icon" type="image/png" href="../../images/logos/mainLogo.png">
+</head>
+<body>
+    <header>
+        <div class="headerTop">
+            <div class="headerLeft">
+                <a href="../home/"><img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+                <a href="../home/"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+            </div>
+            <div class="headerRight">
+                <img src="../../images/logos/language.svg" alt="Language" id="languageIcon" onclick="OpenLang();">
+                <div id="closeLang" onclick="CloseLang();"></div>
+                <ul id="languageMenu">
+                    <li class="languageSelectOption">
+                        <a href="../../pt/gallery">Portugês</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../en/gallery" class="selectedLanguage">English</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../es/gallery">Español</a>
+                    </li>   
+                    <li class="languageSelectOption">
+                        <a href="../../fr/gallery">French</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../it/gallery">Italiano</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../de/gallery">Deutsch</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../gk/gallery">Ελληνικά</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../ru/gallery">Русский</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../tr/gallery">Türkçe</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../ur/gallery">اردو</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../ar/gallery">العربية</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../fa/gallery">فارسی</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../ch/gallery">中文</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../jp/gallery">日本語</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../ko/gallery">한국어</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../hi/gallery">हिन्दी</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../th/gallery">ภาษาไทย</a>
+                    </li>
+                    <li class="languageSelectOption">
+                        <a href="../../vn/gallery">Tiếng Việt</a>
+                    </li>
+                </ul>
+                <img src="../../images/logos/navIcon.svg" alt="Menu" id="navIcon" onclick="OpenNav();">
+            </div>
+
+        </div>
+        <div class="headerBottom">
+            <div id="navCloseIcon" onclick="CloseNav();"></div>
+            <nav id="navbar">
+                <ul>
+                    <img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo">
+                    <div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div>
+                    <hr>
+                    <a href="../home"><li id="navbarHome">Home</li></a>
+                    <a href="../menu"><li id="navbarMenu">Menu</li></a>
+                    <a href="../gallery"><li class="currentPage" id="navbarGallery">Gallery</li></a>
+                    <a href="../contact"><li id="navbarContact">Contact</li></a>
+                    <a href="../about"><li id="navbarAbout">About</li></a>
+                    <a href="../order"><li id="navbarOrder">Order</li></a>
+                </ul>
+            </nav>
+
+            <div class="headerGradient"></div>            
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="gallerySection">
+            <div id="zoomedImageContainer">
+            </div>
+            <label for="gallerySearchInput" class="gallerySearchSection">
+                <label class="gallerySearch">
+                    <input type="search" id="gallerySearchInput" placeholder="Search...">
+                    <img src="../../images/logos/search.svg" alt="SEARCH">
+                </label>
+                <img src="../../images/logos/filter.svg" alt="Filter" class="galleryFilter" onclick="GalleryFilterOpen();">
+                <div id="galleryFilterClose" onclick="GalleryFilterClose();"></div>
+                <div class="galleryFilterSection" id="galleryFilterSection">
+                    <div class="galleryFilterDate">
+                        <h3>Date</h3>
+                        <div class="galleryFilterDateLabels">
+                            <label><input type="radio" name="sortOrder" checked> <span class="galleryFilterCheckmark"></span> Latest</label>
+                            <label><input type="radio" name="sortOrder"><span class="galleryFilterCheckmark"></span> Oldest</label>
+                        </div>
+                    </div>
+                    <div class="galleryFilterCategory">
+                        <h3>Category</h3>
+                        <div class="galleryFilterCategoryLabels">
+                            <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Food</label>
+                            <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Event</label>
+                            <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Restaurant</label>     
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </label>
+            <hr class="hrHorizontal">
+
+            
+            <section class="galleryItemsSecion" id="galleryContainer">
+                <div id="galleryZoomClose" onclick="GalleryZoomClose();"></div>
+            </section>
+        </section>
+
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footerGradient"></div>
+        <div class="footerTop">
+            <a href="../home"><img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+            <a href="../home"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+        </div>
+        <div class="footerMiddle">
+            <div class="footerLeft">
+                <div class="footerInfo">
+                    <div class="footerContactDetails">
+                        <div><img src="../../images/logos/map.svg" alt="Location" class="footerIcon"><p>Rua Conselheiro Lobato 366, Braga, Portugal</p></div>
+                        <div><img src="../../images/logos/phone.svg" alt="phone" class="footerIcon"><p>+351 253 251 136</p></div>
+                        <div><img src="../../images/logos/email.svg" alt="Email" class="footerIcon"><p>bragabitesbusiness@gmail.com</p></div>
+                    </div>
+                    <div class="footerSocialMedias">
+                        <a href="#" target="_blank"><img src="../../images/logos/whatsapp.svg" alt="WhatsApp" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/instagram.svg" alt="Instagram" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/tiktok.svg" alt="TikTok" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/twitter.svg" alt="Twitter" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/facebook.svg" alt="FaceBook" class="footerIcon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerRight">
+                <div class="footerGoogleMaps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.192563717895!2d-8.423330525038178!3d41.543427686303474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ff005cef602b%3A0xa84e18c069307f37!2sBraga%20Bites%20(HALAL)!5e0!3m2!1sen!2spt!4v1766694155736!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <div id="footerCopyright">© Since 2025 Braga Bites. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/gallery.js"></script>
+</body>
+</html>

@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Braga Bites</title>
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
-    <link rel="icon" type="image/png" href="./images/logos/mainLogo.png">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
+    <link rel="icon" type="image/png" href="../../images/logos/mainLogo.png">
 </head>
 <body>
     <header>
         <div class="headerTop">
             <div class="headerLeft">
-                <a href="./index.html"><img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
-                <a href="./index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+                <a href="../home/"><img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+                <a href="../home/"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
             </div>
             <div class="headerRight">
-                <img src="./images/logos/language.svg" alt="Language" id="languageIcon" onclick="OpenLang();">
+                <img src="../../images/logos/language.svg" alt="Language" id="languageIcon" onclick="OpenLang();">
                 <div id="closeLang" onclick="CloseLang();"></div>
                 <ul id="languageMenu">
                     <li class="languageSelectOption">
-                        <a href="../pt">Portugês</a>
+                        <a href="../../pt/gallery">Portugês</a>
                     </li>
                     <li class="languageSelectOption">
                         <a href="../../en/gallery" class="selectedLanguage">English</a>
@@ -74,7 +74,7 @@
                         <a href="../../vn/gallery">Tiếng Việt</a>
                     </li>
                 </ul>
-                <img src="./images/logos/navIcon.svg" alt="Menu" id="navIcon" onclick="OpenNav();">
+                <img src="../../images/logos/navIcon.svg" alt="Menu" id="navIcon" onclick="OpenNav();">
             </div>
 
         </div>
@@ -82,15 +82,15 @@
             <div id="navCloseIcon" onclick="CloseNav();"></div>
             <nav id="navbar">
                 <ul>
-                    <img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo">
+                    <img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo">
                     <div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div>
                     <hr>
-                    <a href="./index.html"><li id="navbarHome">Home</li></a>
-                    <a href="./menu.html"><li id="navbarMenu">Menu</li></a>
-                    <a href="./gallery.html"><li class="currentPage" id="navbarGallery">Gallery</li></a>
-                    <a href="./contact.html"><li id="navbarContact">Contact</li></a>
-                    <a href="./about.html"><li id="navbarAbout">About</li></a>
-                    <a href="./order.html"><li id="navbarOrder">Order</li></a>
+                    <a href="../home"><li id="navbarHome" class="currentPage">Home</li></a>
+                    <a href="../menu"><li id="navbarMenu">Menu</li></a>
+                    <a href="../gallery"><li id="navbarGallery">Gallery</li></a>
+                    <a href="../contact"><li id="navbarContact">Contact</li></a>
+                    <a href="../about"><li id="navbarAbout">About</li></a>
+                    <a href="../order"><li id="navbarOrder">Order</li></a>
                 </ul>
             </nav>
 
@@ -98,63 +98,60 @@
         </div>
     </header>
 
-    <main>
-        
-        <section class="gallerySection">
-            <div id="zoomedImageContainer">
-            </div>
-            <section class="gallerySearchSection">
-                <label class="gallerySearch">
-                    <input type="search" id="gallerySearchInput" placeholder="Search...">
-                    <img src="./images/logos/search.svg" alt="SEARCH">
-                </label>
-                <img src="./images/logos/filter.svg" alt="Filter" class="galleryFilter" onclick="GalleryFilterOpen();">
-                <div id="galleryFilterClose" onclick="GalleryFilterClose();"></div>
-                <div class="galleryFilterSection" id="galleryFilterSection">
-                    <h3>Date</h3>
-                    <div class="galleryFilterDate">
 
-                        <label><input type="radio" name="sortOrder" checked> <span class="galleryFilterCheckmark"></span> Latest</label>
-                        <label><input type="radio" name="sortOrder"><span class="galleryFilterCheckmark"></span> Oldest</label>
-                    </div>
-                    <h3>Category</h3>
-                    <div class="galleryFilterCategory">
-                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Food</label>
-                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Event</label>
-                        <label><input type="checkbox" name="category" checked> <span class="galleryFilterCheckmark"></span> Restaurant</label>
-                    </div>
+    <main>
+        <section class="homeTopSection">
+            <div class="homeTopSlideshowSection">
+                <button class="slideShowPrevious" onclick="SlideShowPrevious();">&lt;</button>
+                <button class="slideShowNext" onclick="SlideShowNext();">&gt;</button>
+                <div class="homeTopImageSection">
+                    <img src="../../images/home/homeSlideShowImage1.webp" alt="Image1" class="slideShowImage">
+                    <img src="../../images/home/homeSlideShowImage2.webp" alt="Image2" class="slideShowImage">
+                    <img src="../../images/home/homeSlideShowImage3.webp" alt="Image3" class="slideShowImage">
+                    <img src="../../images/home/homeSlideShowImage4.webp" alt="Image4" class="slideShowImage">
+                    <img src="../../images/home/homeSlideShowImage5.webp" alt="Image5" class="slideShowImage">
                 </div>
-            </section>
-            <section class="galleryItemsSecion" id="galleryContainer">
-                <div id="galleryZoomClose" onclick="GalleryZoomClose();"></div>
-            </section>
+                <div class="homeTopDotSection">
+                    <div class="homeTopSlideshowDot" onclick="SlideShow(1);"></div>
+                    <div class="homeTopSlideshowDot" onclick="SlideShow(2);"></div>
+                    <div class="homeTopSlideshowDot" onclick="SlideShow(3);"></div>
+                    <div class="homeTopSlideshowDot" onclick="SlideShow(4);"></div>
+                    <div class="homeTopSlideshowDot" onclick="SlideShow(5);"></div>
+                </div>
+            </div>
+            <div class="homeTopTextSection">
+                <div id="homeTopTitleSection">
+                    Main title for top section of the home page!
+                </div>
+                <div id="homeTopDescriptionSection">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, repellat beatae. Dolorum repellendus a vitae earum cupiditate, saepe minus, doloribus totam excepturi molestiae accusantium veritatis veniam sed aliquid rerum eos.
+                </div>
+            </div>
         </section>
 
-        
     </main>
-
 
 
     <footer>
         <div class="footerGradient"></div>
         <div class="footerTop">
-            <a href="./index.html"><img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
-            <a href="./index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+            <a href="../home"><img src="../../images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+            <a href="../home"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
         </div>
         <div class="footerMiddle">
             <div class="footerLeft">
                 <div class="footerInfo">
                     <div class="footerContactDetails">
-                        <div><img src="./images/logos/map.svg" alt="Location" class="footerIcon"><p>Rua Conselheiro Lobato 366, Braga, Portugal</p></div>
-                        <div><img src="./images/logos/phone.svg" alt="phone" class="footerIcon"><p>+351 253 251 136</p></div>
-                        <div><img src="./images/logos/email.svg" alt="Email" class="footerIcon"><p>bragabitesbusiness@gmail.com</p></div>
+                        <div><img src="../../images/logos/map.svg" alt="Location" class="footerIcon"><p>Rua Conselheiro Lobato 366, Braga, Portugal</p></div>
+                        <div><img src="../../images/logos/phone.svg" alt="phone" class="footerIcon"><p>+351 253 251 136</p></div>
+                        <div><img src="../../images/logos/email.svg" alt="Email" class="footerIcon"><p>bragabitesbusiness@gmail.com</p></div>
                     </div>
                     <div class="footerSocialMedias">
-                        <a href="#" target="_blank"><img src="./images/logos/whatsapp.svg" alt="WhatsApp" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="./images/logos/instagram.svg" alt="Instagram" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="./images/logos/tiktok.svg" alt="TikTok" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="./images/logos/twitter.svg" alt="Twitter" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="./images/logos/facebook.svg" alt="FaceBook" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/whatsapp.svg" alt="WhatsApp" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/instagram.svg" alt="Instagram" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/tiktok.svg" alt="TikTok" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/twitter.svg" alt="Twitter" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="../../images/logos/facebook.svg" alt="FaceBook" class="footerIcon"></a>
                     </div>
                 </div>
             </div>
@@ -168,7 +165,7 @@
             <div id="footerCopyright">© Since 2025 Braga Bites. All rights reserved.</div>
         </div>
     </footer>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/gallery.js"></script>
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/home.js"></script>
 </body>
 </html>

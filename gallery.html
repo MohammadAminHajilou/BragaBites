@@ -4,77 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Braga Bites</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="icon" type="image/png" href="images/logos/mainLogo.png">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="icon" type="image/png" href="./images/logos/mainLogo.png">
 </head>
 <body>
     <header>
         <div class="headerTop">
             <div class="headerLeft">
-                <a href="index.html"><img src="images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
-                <a href="index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+                <a href="./index.html"><img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+                <a href="./index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
             </div>
             <div class="headerRight">
-                <img src="images/logos/language.svg" alt="Language" id="languageIcon" onclick="OpenLang();">
+                <img src="./images/logos/language.svg" alt="Language" id="languageIcon" onclick="OpenLang();">
                 <div id="closeLang" onclick="CloseLang();"></div>
                 <ul id="languageMenu">
                     <li class="languageSelectOption">
-                        <a href="/pt">Portugês</a>
+                        <a href="../pt">Portugês</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/en" class="selectedLanguage">English</a>
+                        <a href="../../en/gallery" class="selectedLanguage">English</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/es">Español</a>
+                        <a href="../../es/gallery">Español</a>
                     </li>   
                     <li class="languageSelectOption">
-                        <a href="/fr">French</a>
+                        <a href="../../fr/gallery">French</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/it">Italiano</a>
+                        <a href="../../it/gallery">Italiano</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/de">Deutsch</a>
+                        <a href="../../de/gallery">Deutsch</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/gk">Ελληνικά</a>
+                        <a href="../../gk/gallery">Ελληνικά</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/ru">Русский</a>
+                        <a href="../../ru/gallery">Русский</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/tr">Türkçe</a>
+                        <a href="../../tr/gallery">Türkçe</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/ur">اردو</a>
+                        <a href="../../ur/gallery">اردو</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/ar">العربية</a>
+                        <a href="../../ar/gallery">العربية</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/fa">فارسی</a>
+                        <a href="../../fa/gallery">فارسی</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/ch">中文</a>
+                        <a href="../../ch/gallery">中文</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/jp">日本語</a>
+                        <a href="../../jp/gallery">日本語</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/ko">한국어</a>
+                        <a href="../../ko/gallery">한국어</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/hi">हिन्दी</a>
+                        <a href="../../hi/gallery">हिन्दी</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/th">ภาษาไทย</a>
+                        <a href="../../th/gallery">ภาษาไทย</a>
                     </li>
                     <li class="languageSelectOption">
-                        <a href="/vn">Tiếng Việt</a>
+                        <a href="../../vn/gallery">Tiếng Việt</a>
                     </li>
                 </ul>
-                <img src="images/logos/navIcon.svg" alt="Menu" id="navIcon" onclick="OpenNav();">
+                <img src="./images/logos/navIcon.svg" alt="Menu" id="navIcon" onclick="OpenNav();">
             </div>
 
         </div>
@@ -82,15 +82,15 @@
             <div id="navCloseIcon" onclick="CloseNav();"></div>
             <nav id="navbar">
                 <ul>
-                    <img src="images/logos/mainLogo.png" alt="Logo" class="mainLogo">
+                    <img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo">
                     <div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div>
                     <hr>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="menu.html"><li>Menu</li></a>
-                    <a href="gallery.html"><li class="currentPage">Gallery</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
-                    <a href="about.html"><li>About</li></a>
-                    <a href="order.html"><li>Order</li></a>
+                    <a href="./index.html"><li id="navbarHome">Home</li></a>
+                    <a href="./menu.html"><li id="navbarMenu">Menu</li></a>
+                    <a href="./gallery.html"><li class="currentPage" id="navbarGallery">Gallery</li></a>
+                    <a href="./contact.html"><li id="navbarContact">Contact</li></a>
+                    <a href="./about.html"><li id="navbarAbout">About</li></a>
+                    <a href="./order.html"><li id="navbarOrder">Order</li></a>
                 </ul>
             </nav>
 
@@ -106,9 +106,9 @@
             <section class="gallerySearchSection">
                 <label class="gallerySearch">
                     <input type="search" id="gallerySearchInput" placeholder="Search...">
-                    <img src="images/logos/search.svg" alt="SEARCH">
+                    <img src="./images/logos/search.svg" alt="SEARCH">
                 </label>
-                <img src="images/logos/filter.svg" alt="Filter" class="galleryFilter" onclick="GalleryFilterOpen();">
+                <img src="./images/logos/filter.svg" alt="Filter" class="galleryFilter" onclick="GalleryFilterOpen();">
                 <div id="galleryFilterClose" onclick="GalleryFilterClose();"></div>
                 <div class="galleryFilterSection" id="galleryFilterSection">
                     <h3>Date</h3>
@@ -138,23 +138,23 @@
     <footer>
         <div class="footerGradient"></div>
         <div class="footerTop">
-            <a href="index.html"><img src="images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
-            <a href="index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
+            <a href="./index.html"><img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo"></a>
+            <a href="./index.html"><div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div></a>
         </div>
         <div class="footerMiddle">
             <div class="footerLeft">
                 <div class="footerInfo">
                     <div class="footerContactDetails">
-                        <div><img src="images/logos/map.svg" alt="Location" class="footerIcon"><p>Rua Conselheiro Lobato 366, Braga, Portugal</p></div>
-                        <div><img src="images/logos/phone.svg" alt="phone" class="footerIcon"><p>+351 253 251 136</p></div>
-                        <div><img src="images/logos/email.svg" alt="Email" class="footerIcon"><p>bragabitesbusiness@gmail.com</p></div>
+                        <div><img src="./images/logos/map.svg" alt="Location" class="footerIcon"><p>Rua Conselheiro Lobato 366, Braga, Portugal</p></div>
+                        <div><img src="./images/logos/phone.svg" alt="phone" class="footerIcon"><p>+351 253 251 136</p></div>
+                        <div><img src="./images/logos/email.svg" alt="Email" class="footerIcon"><p>bragabitesbusiness@gmail.com</p></div>
                     </div>
                     <div class="footerSocialMedias">
-                        <a href="#" target="_blank"><img src="images/logos/whatsapp.svg" alt="WhatsApp" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="images/logos/instagram.svg" alt="Instagram" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="images/logos/tiktok.svg" alt="TikTok" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="images/logos/twitter.svg" alt="Twitter" class="footerIcon"></a>
-                        <a href="#" target="_blank"><img src="images/logos/facebook.svg" alt="FaceBook" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="./images/logos/whatsapp.svg" alt="WhatsApp" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="./images/logos/instagram.svg" alt="Instagram" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="./images/logos/tiktok.svg" alt="TikTok" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="./images/logos/twitter.svg" alt="Twitter" class="footerIcon"></a>
+                        <a href="#" target="_blank"><img src="./images/logos/facebook.svg" alt="FaceBook" class="footerIcon"></a>
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
         </div>
 
         <div class="footerBottom">
-            <div class="footerBottomText">© Since 2025 Braga Bites. All rights reserved.</div>
+            <div id="footerCopyright">© Since 2025 Braga Bites. All rights reserved.</div>
         </div>
     </footer>
     <script src="./scripts/script.js"></script>

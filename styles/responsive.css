@@ -100,6 +100,27 @@
 .homeTopTextSection {
     max-width: 50%;
 }
+
+
+
+.homeTopSlideshowSection {
+
+    padding: 10px;
+
+}
+
+#homeTopTitleSection {
+    font-size: 2.5rem;
+
+}
+
+#homeTopDescriptionSection {
+    font-size: 1.1rem;
+    text-indent: 1.5em;
+    padding: 10px;
+}
+
+
 .contactSectionBottom a{
 opacity: 0.8;
 }
@@ -140,6 +161,31 @@ opacity: 1;
     top: 11%;
 
 }
+
+.slideShowPrevious { left: -15px; }
+.slideShowNext { right: -15px; }
+
+.homeTopSlideshowSection {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.aboutSection {
+    margin: 20px auto;
+}
+
+
+
+
+.aboutSection div {
+
+    font-size: 1.1rem;
+}
+
+
+
+
 
 }
 

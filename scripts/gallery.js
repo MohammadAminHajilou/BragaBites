@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach(({ id, title, date, category }) => {
                 galleryContainer.insertAdjacentHTML("beforeend", `
                     <div class="galleryImageContainer" onclick="GalleryZoom(${id});">
-                        <img src="images/gallery/galleryImage${id}.webp" alt="${title}" class="galleryImage">
+                        <img src="images/gallery/galleryImage${id}.webp" alt="${title}" class="galleryImage loading="lazy"">
                         <div class="galleryImageContainerBottom">
                             <div class="galleryDate">${date}</div>
                             <div class="galleryTitle">${title}</div>
@@ -44,7 +44,7 @@ function GalleryZoom(num) {
         zoomedImageContainer.style.display = "block";
     }
     if (zoomedImageContainer.style.animation = "none") {
-        zoomedImageContainer.style.animation = "opacity0to1 0.3s ease-in-out forwards";
+        zoomedImageContainer.style.animation = "galleryzoompopin 0.3s ease-in-out forwards";
     }
     close.style.display = "block";
     close.style.animation = "opacity0to1 0.3s ease-in-out forwards";
@@ -59,7 +59,7 @@ function GalleryZoomClose(){
     const close = document.getElementById("galleryZoomClose");
 
     
-    zoomedImageContainer.style.animation = "opacity1to0 0.3s ease-in-out forwards";
+    zoomedImageContainer.style.animation = "galleryzoompopout 0.3s ease-in-out forwards";
     zoomedImageContainer.offsetHeight;
 
     close.style.animation = "none";
@@ -87,7 +87,7 @@ function GalleryFilterOpen() {
 
     filter.style.display = "flex";
     close.style.display = "block";
-    filter.style.animation = "none";
+    filter.style.animation = "galleryfilterpopin 0.2s ease-in-out forwards";
     filter.offsetHeight;
     close.style.animation = "opacity0to1 0.2s ease-in-out forwards";
 
@@ -101,7 +101,7 @@ function GalleryFilterClose() {
     filter.style.animation = "none";
     filter.offsetHeight; 
 
-    filter.style.animation = "opacity1to0 0.3s ease-in-out forwards";
+    filter.style.animation = "galleryfilterpopout 0.2s ease-in-out forwards";
 
     close.style.animation = "opacity1to0 0.3s ease-in-out forwards";
 

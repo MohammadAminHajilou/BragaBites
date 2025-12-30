@@ -1,6 +1,8 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slideShowImage');
 const dots = document.querySelectorAll('.homeTopSlideshowDot');
+const slideshow = document.querySelectorAll('.homeTopSlideshowSection');
+
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -28,3 +30,46 @@ function SlideShow(index) {
 showSlide(currentSlide);
 
 
+
+let dragStartX = 0;
+let isDragging = false;
+const dragThreshold = 50; 
+
+const slideshowElement = document.querySelector('.homeTopSlideshowSection');
+
+slideshowElement.addEventListener('touchstart', e => {
+    dragStartX = e.touches[0].clientX;
+}, { passive: true });
+
+slideshowElement.addEventListener('touchend', e => {
+    const dragEndX = e.changedTouches[0].clientX;
+    handleDrag(dragStartX, dragEndX);
+});
+
+slideshowElement.addEventListener('mousedown', e => {
+    isDragging = true;
+    dragStartX = e.clientX;
+});
+
+slideshowElement.addEventListener('mouseup', e => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    handleDrag(dragStartX, e.clientX);
+});
+
+slideshowElement.addEventListener('mouseleave', () => {
+    isDragging = false;
+});
+
+function handleDrag(startX, endX) {
+    const diff = startX - endX;
+
+    if (Math.abs(diff) < dragThreshold) return;
+
+    if (diff > 0) {
+        SlideShowNext();
+    } else {
+        SlideShowPrevious();
+    }
+}

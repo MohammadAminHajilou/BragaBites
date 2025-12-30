@@ -5,12 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Braga Bites</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="icon" type="image/png" href="./images/logos/mainLogo.png">
 </head>
 <body>
-    <script>
-        window.location.href = "en/home/";
-    </script>
+
+        <div class="logo">
+            <img src="./images/logos/mainLogo.png" alt="Logo" class="mainLogo">
+            <div class="mainText"><span class="braga">BRAGA</span><span class="bites">BITES</span></div>
+        </div>
+
+        <ul id="languageMenu">
+            <a href="./pt/home"><li class="languageSelectOption">Portugês</li></a>
+            <a href="./en/home"><li class="languageSelectOption">English</li></a>
+            <a href="./es/home"><li class="languageSelectOption">Español</li></a>
+            <a href="./fr/home"><li class="languageSelectOption">French</li></a>
+            <a href="./it/home"><li class="languageSelectOption">Italiano</li></a>
+            <a href="./de/home"><li class="languageSelectOption">Deutsch</li></a>
+            <a href="./gk/home"><li class="languageSelectOption">Ελληνικά</li></a>
+            <a href="./ru/home"><li class="languageSelectOption">Русский</li></a>
+            <a href="./tr/home"><li class="languageSelectOption">Türkçe</li></a>
+            <a href="./ur/home"><li class="languageSelectOption">اردو</li></a>
+            <a href="./ar/home"><li class="languageSelectOption">العربية</li></a>
+            <a href="./fa/home"><li class="languageSelectOption">فارسی</li></a>
+            <a href="./ch/home"><li class="languageSelectOption">中文</li></a>
+            <a href="./jp/home"><li class="languageSelectOption">日本語</li></a>
+            <a href="./ko/home"><li class="languageSelectOption">한국어</li></a>
+            <a href="./hi/home"><li class="languageSelectOption">हिन्दी</li></a>
+            <a href="./th/home"><li class="languageSelectOption">ภาษาไทย</li></a>
+            <a href="./vn/home"><li class="languageSelectOption">Tiếng Việt</li></a>
+        </ul>
+    <style>
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mainLogo {z-index: 1000; scale: 1.6;}
+    .braga {color: #131313;}
+
+    .mainText {margin-top: -5px;   font-size: 2rem;}
+
+    body {padding: 25px 5px;   gap: 15px;}
+
+    a {text-decoration: none;}
+    #languageMenu {
+        display: grid;
+        background-color: var(--body-background-color-bold);
+        margin: 0px auto;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom:  0;
+        right: 0;
+        transform: none; 
+        animation: none;
+    }
+    .languageSelectOption {
+        color: var(--hover-color-bolder);
+        background-color: var(--main-background-color-bolder);
+        font-weight: bold;
+    }
+    .languageSelectOption:hover {
+        transform: translateY(-1px);
+    }
+
+
+
+    </style>
 </body>
 </html>

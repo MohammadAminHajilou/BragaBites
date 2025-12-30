@@ -112,7 +112,8 @@
 
 .footerGoogleMaps {width: 80%;}
 
-#homeTopTitleSection {font-size: 2.5rem;}
+.homeTopTitleSection {font-size: 2.5rem;}
+.homeTopTitleSection .braga , .homeTopTitleSection .bites {font-size: 3rem;}
 
 #homeTopDescriptionSection {
     font-size: 1.1rem;
@@ -203,6 +204,7 @@ opacity: 0.8;
     background-image: linear-gradient(to right , transparent , var(--main-background-color-boldest) , transparent);
 }
 
+.aboutSection hr {display: none;}
 
 .galleryFilter {display: none;}
 
@@ -269,7 +271,7 @@ main {padding: 5px;}
 .aboutSection img {
     max-width: 700px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 

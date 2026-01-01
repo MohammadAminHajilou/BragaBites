@@ -2,24 +2,24 @@
   {
     "id": 1,
     "title": "Doner kebab",
-    "portion": "For 2",
-    "price": "4€",
+    "portion": "2",
+    "price": "4.99",
     "description": "Chicken meat kebab with rice and vegetables",
     "category" : "kebab"
   },
 {
     "id": 2,
     "title": "Beef kebab",
-    "portion": "For 2",
-    "price": "4.5€",
+    "portion": "2",
+    "price": "4.5",
     "description": "Tender beef meat kebab served with aromatic rice and fresh seasonal vegetables",
     "category": "kebab"
 },
   {
     "id": 3,
     "title": "Coca Kola 0",
-    "portion": "For 1",
-    "price": "1.5€",
+    "portion": "1",
+    "price": "1.5",
     "description": "Coca kola 0 for one person",
     "category": "beverage"
   }

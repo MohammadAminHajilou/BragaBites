@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         items.forEach(({ id, title, date, category }) => {
             galleryContainer.insertAdjacentHTML("beforeend", `
-                <div class="galleryImageContainer" onclick="GalleryZoom(${id});">
+                <div class="galleryImageContainer" onclick="GalleryZoom(${id});" loading="lazy">
                     <img
                         src="../../images/gallery/galleryImage${id}.webp"
                         alt="${title}"

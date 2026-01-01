@@ -1,0 +1,58 @@
+  [
+    {
+      "id": 1,
+      "title": "Doner kebab",
+      "price": "4.99",
+      "portion": "2",
+      "description": "Tender grilled meat in warm pita bread with fresh crisp vegetables, onions, and our special garlic sauce"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Shawarma",
+      "price": "3.99",
+      "portion": "2",
+      "description": "Slow-roasted marinated chicken with creamy tahini sauce, pickled vegetables, and fresh tomatoes wrapped in soft bread"
+    },
+    {
+      "id": 3,
+      "title": "Lamb Kebab",
+      "price": "4.99",
+      "portion": "2",
+      "description": "Succulent seasoned lamb skewers chargrilled to perfection with roasted bell peppers, onions, and zucchini"
+    },
+    {
+      "id": 4,
+      "title": "Mixed Grill",
+      "price": "3.49",
+      "portion": "2",
+      "description": "Premium combination of tender chicken, juicy lamb, and beef served over fluffy basmati rice with grilled vegetables"
+    },
+    {
+      "id": 5,
+      "title": "Falafel Wrap",
+      "price": "4.49",
+      "portion": "2",
+      "description": "Golden crispy chickpea fritters with creamy hummus, fresh lettuce, tomatoes, cucumbers, and tahini dressing"
+    },
+    {
+      "id": 6,
+      "title": "Beef Koobideh",
+      "price": "8.50",
+      "portion": "2",
+      "description": "Authentic Persian-style ground beef kebab infused with fragrant herbs, spices, and saffron served with rice"
+    },
+    {
+      "id": 7,
+      "title": "Chicken Tikka",
+      "price": "7.50",
+      "portion": "2",
+      "description": "Tender Indian-style marinated chicken cooked in tandoor with aromatic spices, served with creamy yogurt sauce and rice"
+    },
+    {
+      "id": 8,
+      "title": "Seafood Platter",
+      "price": "12.99",
+      "portion": "2",
+      "description": "Fresh grilled fish filet and succulent shrimp tossed with lemon garlic butter, herbs, and served with seasonal vegetables"
+    }
+  ]

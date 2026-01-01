@@ -73,3 +73,21 @@ function handleDrag(startX, endX) {
         SlideShowPrevious();
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const itemContainer = document.querySelector(".homeMiddleSection");
+    fetch("../json/home.json")
+        .then(res => res.json())
+        .then(data => {
+            itemContainer.innerHTML = "";
+            data.forEach(({ id, title, price, portion , description}) => {
+                itemContainer.insertAdjacentHTML("beforeend", `
+                    <div class="homeItem" loading="lazy"><div class="homeItemImageContainer"><img loading="lazy" src="../../images/home/homeMiddle${id}.webp" class="homeItemImage" alt="${title}"><div class="homeItemPortion">For${portion}</div><div class="homeItemPrice">${price}€</div></div><div class="homeItemTitle">${title}</div><div class="homeItemDescription">${description}</div></div>
+                `);
+            });
+            })
+        .catch(err => console.error("FETCH ERROR:", err));
+});
+
